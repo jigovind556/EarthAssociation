@@ -31,7 +31,7 @@ const Header = () => {
 					id="navbar-toggle"
 					data-collapse-toggle="navbar-dropdown"
 					type="button"
-					className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg laptop:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+					className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
 					aria-controls="navbar-dropdown"
 					aria-expanded="false"
 				>
@@ -56,12 +56,12 @@ const Header = () => {
 					className="hidden w-full lg:block lg:w-auto"
 					id="navbar-dropdown"
 				>
-					<ul className="flex flex-col items-center font-medium p-4 laptop:p-0 mt-4 border border-gray-100 rounded-lg laptop:flex-row laptop:space-x-8 laptop:mt-0 laptop:border-0 ">
+					<ul className="flex flex-col items-center font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 ">
 						{menu.map((menuItem) => (
 							<li key={menuItem.item}>
 								<a
 									href={menuItem.link}
-									className="block py-2 pl-3 pr-4 uppercase text-[13px] font-raleway font-bold text-[#666] hover:text-pgreen  rounded  laptop:p-0"
+									className="block py-2 pl-3 pr-4 uppercase text-[13px] font-raleway font-bold text-[#666] hover:text-pgreen  rounded  lg:p-0"
 									aria-current="page"
 								>
 									{menuItem.item}
