@@ -53,7 +53,7 @@ const Header = () => {
 					</svg>
 				</button>
 				<div
-					className="hidden w-full laptop:block laptop:w-auto"
+					className="hidden w-full lg:block lg:w-auto"
 					id="navbar-dropdown"
 				>
 					<ul className="flex flex-col items-center font-medium p-4 laptop:p-0 mt-4 border border-gray-100 rounded-lg laptop:flex-row laptop:space-x-8 laptop:mt-0 laptop:border-0 ">
