@@ -1,137 +1,96 @@
-import { useState } from "react"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+// import { images } from "../../assets/index"
 
-const ProgrammeCard = ({ title, points, color, isExpanded, onClick }) => {
-	return (
-		<div
-			className={`rounded-md overflow-clip flex-1 min-w-[200px] sm:min-w-[350px] tab:min-w-[500px] lg:min-w-[450px] `}
-		>
-			<div>
-				<div
-					className={`text-black  ${color} p-2.5 font-bold tracking-wider text-start text-[20px] tab:text-[25px]  cursor-pointer flex items-center`}
-					onClick={onClick}
-				>
-					<span
-						className={`mr-2 transform transition-transform duration-300 ${
-							isExpanded ? "rotate-90" : ""
-						}`}
-					>
-						▶
-					</span>
-					{title}
-				</div>
-				<div
-					className={`font-raleway text-[16px] text-start leading-normal tracking-wider overflow-hidden transition-max-height duration-500 ease-in-out ${
-						isExpanded ? "max-h-[1000px]" : "max-h-0"
-					}`}
-				>
-					<ul className="list-disc pl-12 mt-4">
-						{points.map((point, index) => (
-							<li key={index}>{point}</li>
-						))}
-					</ul>
-				</div>
-			</div>
-		</div>
-	)
+const responsive = {
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 3,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 768 },
+		items: 2,
+	},
+	mobile: {
+		breakpoint: { max: 768, min: 0 },
+		items: 1,
+	},
 }
 
 const Programmes = () => {
-	const [expandedIndex, setExpandedIndex] = useState(null)
-
-	const programmes = [
-		{
-			title: "School and College Engagement",
-			points: [
-				"Poster Making Competitions",
-				"Face Painting Sessions",
-				"Debate Competitions",
-				"Environmental Workshops",
-				"Green Campus Projects",
-			],
-			color: "bg-yellow-100",
-		},
-		{
-			title: "Environment Fest",
-			points: [
-				"Workshops on Sustainability",
-				"Guest Lectures by Experts",
-				"Tree Planting Drives",
-				"Art Exhibitions",
-				"Film Screenings",
-			],
-			color: "bg-purple-100",
-		},
-		{
-			title: "Wildlife Week Celebration",
-			points: [
-				"Nature Walks",
-				"Bird-Watching Expeditions",
-				"Informative Talks",
-				"Photography Contests",
-				"Wildlife Workshops",
-			],
-			color: "bg-teal-100",
-		},
-		{
-			title: "E20 Project",
-			points: [
-				"Interactive Sessions",
-				"Field Trips",
-				"Community Projects",
-				"Student Ambassadors",
-				"Resource Materials",
-			],
-			color: "bg-orange-100",
-		},
-		{
-			title: "Awareness Programs",
-			points: [
-				"Environmental Campaigns",
-				"Wildlife Campaigns",
-				"Public Service Announcements",
-				"Community Clean-Up Drives",
-				"Recycling Programs",
-			],
-			color: "bg-green-100",
-		},
-		{
-			title: "International Cultural Exchange Programme",
-			points: [
-				"Cultural Programs",
-				"Workshops",
-				"Discussions",
-				"Exchange Visits",
-				"Joint Projects",
-			],
-			color: "bg-red-100",
-		},
-	]
-
-	const handleCardClick = (index) => {
-		setExpandedIndex(expandedIndex === index ? null : index)
-	}
-
 	return (
 		<section>
-			<div className="max-w-[1140px] mx-auto pt-[60px] pb-[40px] px-2.5 text-center text-black font-bebas">
-				<h2 className="text-[45px] tracking-[1px] font-bold mb-8">
-					OUR INITIATIVES
+			<div className="max-w-[1140px] mx-auto p-2.5 text-[18px] text-center text-black font-raleway">
+				<h2 className=" font-bebas text-[45px] tracking-[1px] font-bold mb-8">
+					OUR PROGRAMMES
 				</h2>
-				<div className="flex flex-wrap gap-[18px] p-5">
-					{programmes.map((programme, index) => (
-						<ProgrammeCard
-							key={index}
-							title={programme.title}
-							points={programme.points}
-							color={programme.color}
-							isExpanded={expandedIndex === index}
-							onClick={() => handleCardClick(index)}
-						/>
-					))}
+				<Carousel
+					className="p-2.5"
+					// infinite={true}
+					swipeable
+					responsive={responsive}
+					removeArrowOnDeviceType={["tablet", "desktop"]}
+				>
+					{programmeData.map((t, i) => {
+						return (
+							<ProgrammeCard
+								image={t.image}
+								key={i}
+								title={t.title}
+								description={t.description}
+							/>
+						)
+					})}
+				</Carousel>
+				{/* <div className="grid grid-cols-1 tab:grid-cols-2 lg:grid-cols-3 gap-4"></div> */}
+				<div className="mt-4">
+					<a className="text-pgreen " href="">
+						know more &gt;
+					</a>
 				</div>
 			</div>
 		</section>
 	)
 }
-
 export default Programmes
+
+const ProgrammeCard = ({ image, title, description }) => {
+	return (
+		<div className="text-start bg-[#f3f2f3] mx-3 rounded-b-lg overflow-clip">
+			<div>
+				<img
+					src={image || ""}
+					alt=""
+					className="bg-black w-full h-[250px] shadow-md shadow-black/50"
+				/>
+			</div>
+			<div className="px-[50px] pb-10 pt-4 flex flex-col gap-4">
+				<div className="text-[17px] font-raleway font-bold tracking-wider">
+					{title}
+				</div>
+				<div className="text-[14px] font-raleway">{description}</div>
+			</div>
+		</div>
+	)
+}
+
+const programmeData = [
+	{
+		image: "",
+		title: "Environmental Education Program",
+		description:
+			"Our Environmental Education Program aims to integrate environmental studies into school curriculums. We work closely with educational institutions to develop and implement lesson plans that cover key environmental topics such as climate change, biodiversity, and sustainable practices.",
+	},
+	{
+		image: "",
+		title: "Community Outreach Program",
+		description:
+			"Through our Community Outreach Program, we aim to raise awareness and foster community involvement in environmental conservation. We conduct neighborhood clean-up drives, tree planting events, and recycling workshops to engage local residents in hands-on conservation activities.",
+	},
+	{
+		image: "",
+		title: "Conservation Research Program",
+		description:
+			"The Conservation Research Program focuses on conducting scientific research to support conservation efforts. We collaborate with local universities and research institutions to study local ecosystems, wildlife populations, and the impact of human activities on the environment.",
+	},
+]
