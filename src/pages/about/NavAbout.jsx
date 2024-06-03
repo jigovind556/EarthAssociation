@@ -10,7 +10,7 @@ const NavAbout = ({ current }) => {
 								item.toLowerCase() === current.toLowerCase()
 									? "bg-pgreen text-white"
 									: "bg-[#FFF000]"
-							} tracking-widest py-8 flex items-center justify-center text-center h-full`}
+							} tracking-widest p-3 text-[10px] tab:text-[16px] tab:px-0 tab:py-8 flex items-center justify-center text-center h-full`}
 						>
 							{item}
 						</div>
