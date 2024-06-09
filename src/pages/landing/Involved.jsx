@@ -1,5 +1,8 @@
 import { images } from "../../assets/index"
 import donate from "../../assets/donate.png"
+import spread from "../../assets/spread.png"
+import participate from "../../assets/participate.png"
+import volunteering from "../../assets/volunteering.png"
 
 const Involved = () => {
 	return (
@@ -52,14 +55,14 @@ const InvolvedCard = ({ icon, title, content, color }) => {
 
 const involvedContent = [
 	{
-		icon: images.education,
+		icon: participate,
 		title: "Participate in our events",
 		content:
 			"Attend our workshops, festivals, and other events to learn more about environmental conservation and how you can make a difference.",
 		color: "bg-yellow-100",
 	},
 	{
-		icon: images.education,
+		icon: volunteering,
 		title: "Volunteer",
 		content:
 			"Offer your time and skills to help with our initiatives and projects.",
@@ -73,7 +76,7 @@ const involvedContent = [
 		color: "bg-red-100",
 	},
 	{
-		icon: images.education,
+		icon: spread,
 		title: "Spread the Word",
 		content:
 			"Share our mission and activities with your friends and family. Help us raise awareness about the importance of environmental conservation.",

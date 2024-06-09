@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const Header = () => {
 	useEffect(() => {
@@ -19,14 +20,11 @@ const Header = () => {
 	return (
 		<nav className="bg-white border-gray-200 shadow-md fixed top-0 w-full z-50">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2 mt-4">
-				<a
-					href="https://www.codewithfaraz.com"
-					className="flex items-center"
-				>
+				<Link to="/" className="flex items-center">
 					<span className="self-center text-2xl font-semibold whitespace-nowrap">
 						Earth Assosciation
 					</span>
-				</a>
+				</Link>
 				<button
 					id="navbar-toggle"
 					data-collapse-toggle="navbar-dropdown"
@@ -59,13 +57,13 @@ const Header = () => {
 					<ul className="flex flex-col items-center font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 ">
 						{menu.map((menuItem) => (
 							<li key={menuItem.item}>
-								<a
-									href={menuItem.link}
+								<Link
+									to={menuItem.link}
 									className="block py-2 pl-3 pr-4 uppercase text-[13px] font-raleway font-bold text-[#666] hover:text-pgreen  rounded  lg:p-0"
 									aria-current="page"
 								>
 									{menuItem.item}
-								</a>
+								</Link>
 							</li>
 						))}
 					</ul>
@@ -80,7 +78,7 @@ export default Header
 const menu = [
 	{
 		item: "About us",
-		link: "#",
+		link: "/about",
 	},
 	{
 		item: "Our work",

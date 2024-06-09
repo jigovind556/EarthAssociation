@@ -1,4 +1,8 @@
 import Carousel from "react-multi-carousel"
+import b from "../../assets/b.jpg"
+import c from "../../assets/c.jpg"
+import d from "../../assets/d.jpg"
+import e from "../../assets/e.jpg"
 import "react-multi-carousel/lib/styles.css"
 
 const responsive = {
@@ -34,9 +38,9 @@ const Impact = () => {
 					<div className="flex justify-center flex-col items-center">
 						<div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[250px]">
 							<img
-								src=""
+								src={b}
 								alt=""
-								className="w-full h-full bg-black z-0 rounded-xl"
+								className="w-full object-cover brightness-75 h-full bg-black z-0 rounded-xl"
 							/>
 							<span className="text-left uppercase leading-10 absolute bottom-10 left-6  font-bebas font-bold tracking-wider text-[35px] text-white z-100">
 								Increased <br />
@@ -56,9 +60,9 @@ const Impact = () => {
 					<div className="flex justify-center flex-col items-center">
 						<div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[250px]">
 							<img
-								src=""
+								src={c}
 								alt=""
-								className="w-full h-full bg-black z-0 rounded-xl"
+								className="w-full h-full object-cover brightness-75 bg-black z-0 rounded-xl"
 							/>
 							<span className="uppercase text-left leading-10 absolute bottom-10 left-6  font-bebas font-bold tracking-wider text-[35px] text-white z-100">
 								Behavioral <br />
@@ -78,9 +82,9 @@ const Impact = () => {
 					<div className="flex justify-center flex-col items-center">
 						<div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[250px]">
 							<img
-								src=""
+								src={d}
 								alt=""
-								className="w-full h-full bg-black z-0 rounded-xl"
+								className="w-full h-full object-cover brightness-75 bg-black z-0 rounded-xl"
 							/>
 							<span className="uppercase text-left leading-10 absolute bottom-10 left-6  font-bebas font-bold tracking-wider text-[35px] text-white z-100">
 								Joint <br /> Effort
@@ -100,9 +104,9 @@ const Impact = () => {
 					<div className="flex justify-center flex-col items-center">
 						<div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[250px]">
 							<img
-								src=""
+								src={e}
 								alt=""
-								className="w-full h-full bg-black z-0 rounded-xl"
+								className="w-full h-full object-cover brightness-75 bg-black z-0 rounded-xl"
 							/>
 							<span className="uppercase text-left leading-10 absolute bottom-10 left-6  font-bebas font-bold tracking-wider text-[35px] text-white z-100">
 								Global

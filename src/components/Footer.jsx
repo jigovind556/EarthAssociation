@@ -6,8 +6,8 @@ const Footer = () => {
 	return (
 		<section className="bg-[#4C4D4C]">
 			<div className="max-w-[1140px] mx-auto p-5 text-[18px] text-center text-white font-raleway">
-				<div className="mb-12">
-					<h3 className="text-[20px] tab:text-[24px] mb-4">
+				{/* <div className="mb-12"> */}
+				{/* <h3 className="text-[20px] tab:text-[24px] mb-4">
 						Subscribe to our Newsletter
 					</h3>
 					<form
@@ -32,7 +32,7 @@ const Footer = () => {
 						</button>
 					</form>
 					<hr className="tab:hidden mx-auto h-[1px] bg-white mt-8 w-[80%]" />
-				</div>
+				</div> */}
 				<div className="flex justify-between items-center flex-col md:flex-row gap-4">
 					<div className="text-[18px] text-start font-medium">
 						<h3 className="text-[22px]">Earth Association</h3>

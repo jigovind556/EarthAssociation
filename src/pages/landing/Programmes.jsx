@@ -1,6 +1,8 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-// import { images } from "../../assets/index"
+import a from "../../assets/a.jpg"
+import g from "../../assets/g.jpg"
+import f from "../../assets/f.jpg"
 
 const responsive = {
 	desktop: {
@@ -61,7 +63,7 @@ const ProgrammeCard = ({ image, title, description }) => {
 				<img
 					src={image || ""}
 					alt=""
-					className="bg-black w-full h-[250px] shadow-md shadow-black/50"
+					className="bg-black cover w-full h-[250px] shadow-md shadow-black/50"
 				/>
 			</div>
 			<div className="px-[50px] pb-10 pt-4 flex flex-col gap-4">
@@ -76,19 +78,19 @@ const ProgrammeCard = ({ image, title, description }) => {
 
 const programmeData = [
 	{
-		image: "",
+		image: a,
 		title: "Environmental Education Program",
 		description:
 			"Our Environmental Education Program aims to integrate environmental studies into school curriculums. We work closely with educational institutions to develop and implement lesson plans that cover key environmental topics such as climate change, biodiversity, and sustainable practices.",
 	},
 	{
-		image: "",
+		image: g,
 		title: "Community Outreach Program",
 		description:
 			"Through our Community Outreach Program, we aim to raise awareness and foster community involvement in environmental conservation. We conduct neighborhood clean-up drives, tree planting events, and recycling workshops to engage local residents in hands-on conservation activities.",
 	},
 	{
-		image: "",
+		image: f,
 		title: "Conservation Research Program",
 		description:
 			"The Conservation Research Program focuses on conducting scientific research to support conservation efforts. We collaborate with local universities and research institutions to study local ecosystems, wildlife populations, and the impact of human activities on the environment.",
