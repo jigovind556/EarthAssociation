@@ -80,28 +80,28 @@ const menu = [
 		item: "About us",
 		link: "/about",
 	},
-	{
-		item: "Our work",
-		link: "#",
-	},
-	{
-		item: "Campaigns",
-		link: "#",
-	},
-	{
-		item: "Get involved",
-		link: "#",
-	},
-	{
-		item: "Media Centre",
-		link: "#",
-	},
-	{
-		item: "Resource Center",
-		link: "#",
-	},
-	{
-		item: "Contact us",
-		link: "#",
-	},
+	// {
+	// 	item: "Our work",
+	// 	link: "#",
+	// },
+	// {
+	// 	item: "Campaigns",
+	// 	link: "#",
+	// },
+	// {
+	// 	item: "Get involved",
+	// 	link: "#",
+	// },
+	// {
+	// 	item: "Media Centre",
+	// 	link: "#",
+	// },
+	// {
+	// 	item: "Resource Center",
+	// 	link: "#",
+	// },
+	// {
+	// 	item: "Contact us",
+	// 	link: "#",
+	// },
 ]
