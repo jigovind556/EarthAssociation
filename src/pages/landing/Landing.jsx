@@ -5,6 +5,7 @@ import Impact from "./Impact"
 import Programmes from "./Programmes"
 import Involved from "./Involved"
 import Hero from "./Hero"
+import Blogs from "./Blogs"
 
 const Landing = () => {
 	return (
@@ -16,6 +17,7 @@ const Landing = () => {
 			<Goals />
 			<Impact />
 			<Involved />
+			<Blogs />
 		</main>
 	)
 }

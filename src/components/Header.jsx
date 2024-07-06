@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
+import logo from "../assets/logo.jpg"
 
 const Header = () => {
 	useEffect(() => {
@@ -21,6 +22,11 @@ const Header = () => {
 		<nav className="bg-white border-gray-200 shadow-md fixed top-0 w-full z-50">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2 mt-4">
 				<Link to="/" className="flex items-center">
+					<img
+						src={logo}
+						alt="Earth Assosciation"
+						className="w-10 h-10 mr-2 rounded-full"
+					/>
 					<span className="self-center text-2xl font-semibold whitespace-nowrap">
 						Earth Assosciation
 					</span>
