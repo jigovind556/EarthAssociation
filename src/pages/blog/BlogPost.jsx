@@ -15,11 +15,18 @@ const BlogPost = () => {
 
   console.log(blog);
   return (
-    <main className="mt-20 px-4 md:px-8 mb-8">
-      <section className="max-w-3xl mx-auto pt-4 min-h-[79vh]">
+    <main className="mt-20 px-4 md:px-8 pb-8  min-h-screen">
+      <div className="max-w-3xl mx-auto pt-4">
         <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
-        {blog.content}
-      </section>
+        {/* <div className="relative flex justify-center h-[300px] tab:h-[300px]"> */}
+        <img
+          src={blog.image}
+          alt=""
+          className="w-auto min-w-[250px] float-right ml-4 my-6 h-[300px] center object-cover brightness-75 bg-black z-0 rounded-xl"
+        />
+        {/* </div> */}
+        <div className="text-lg">{blog.content}</div>
+      </div>
     </main>
   );
 };

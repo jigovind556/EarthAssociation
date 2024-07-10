@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import international from "../../assets/international.png";
 import glance from "../../assets/glance.png";
+import director from "../../assets/director.jpeg";
+import coordinator from "../../assets/coordinator.jpeg";
 
 export const blogsData = [
   {
     id: 1,
     title: "Dr. Hemlata Sharma",
+    image: director,
     preview:
       "Dr. Hemlata Sharma highlights The Earth Association's continuous efforts in environmental conservation across Jaipur and India, including record-setting initiatives like the Wildlife Week art competition.",
     content: (
@@ -54,6 +57,7 @@ export const blogsData = [
   {
     id: 2,
     title: "Coordinator’s Message",
+    image: coordinator,
     preview:
       "Mrs. Mamta Sharma, the Program Coordinator, shares updates on The Earth Association's sustainable projects, emphasizing their impact on urban green spaces, youth education, and clean energy advocacy.",
     content: (
@@ -297,12 +301,12 @@ export const blogsData = [
 const Blogs = () => {
   return (
     <section>
-      <div className="max-w-[1140px] mx-auto p-2.5 text-[18px] text-center text-black font-raleway min-h-[90vh]">
+      <div className="max-w-[1140px] mx-auto p-2.5 mt-20 mb-8 text-[18px] text-center text-black font-raleway min-h-[90vh]">
         <h2 className="font-bebas text-[45px] tracking-[1px] font-bold mb-8">
           Blogs
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
           {blogsData.map((blog) => (
             <BlogCard key={blog.id} {...blog} />
           ))}
@@ -314,26 +318,28 @@ const Blogs = () => {
 
 export default Blogs;
 
-const BlogCard = ({ image, title, preview, id }) => {
+export const BlogCard = ({ image, title, preview, id }) => {
   return (
-    <div className="text-start bg-[#f3f2f3] mx-3 rounded-b-lg overflow-clip">
-      <div>
+    <div className="flex justify-center flex-col items-center">
+      <div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[300px]">
         <img
-          src={image || ""}
+          src={image}
           alt=""
-          className="bg-black cover w-full h-[250px] shadow-md shadow-black/50"
+          className="w-full h-full center object-cover brightness-75 bg-black z-0 rounded-xl"
         />
       </div>
-      <div className="px-[50px] pb-10 pt-4 flex flex-col gap-4">
-        <div className="text-[17px] font-raleway font-bold tracking-wider">
+      <div className="mt-4 relative w-[350px] lg:w-[300px] font-raleway text-[15px] text-left">
+        <span className="uppercase font-bold text-[20px] tracking-tighter py-2">
           {title}
-        </div>
-        <div className="text-[14px] font-raleway">{preview}</div>
+        </span>
+        <p className="pb-6 tracking-wide">{preview}</p>
+        <Link
+          to={`/blogs/${id}`} // Pass only the ID
+          className="text-blue-500 font-semibold mt-2 inline-block hover:underline"
+        >
+          Know More
+        </Link>
       </div>
-      <Link
-        to={`/blogs/${id}`} // Pass only the ID
-        className="text-blue-500 font-semibold mt-2 inline-block hover:underline"
-      ></Link>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { blogsData } from "../blog/Blogs";
+import { BlogCard } from "../blog/Blogs";
+import { Link } from "react-router-dom";
 
 const responsive = {
   desktop: {
@@ -37,38 +39,17 @@ const Blogs = () => {
                 key={i}
                 title={t.title}
                 preview={t.preview}
+                id={t.id}
               />
             );
           })}
         </Carousel>
         {/* <div className="grid grid-cols-1 tab:grid-cols-2 lg:grid-cols-3 gap-4"></div> */}
         <div className="">
-          <a className="text-pgreen " href="">
-            know more &gt;
-          </a>
+          <Link to={"/blog"}>know more &gt;</Link>
         </div>
       </div>
     </section>
   );
 };
 export default Blogs;
-
-const BlogCard = ({ image, title, preview }) => {
-  return (
-    <div className="text-start bg-[#f3f2f3] mx-3 rounded-b-lg overflow-clip">
-      <div>
-        <img
-          src={image || ""}
-          alt=""
-          className="bg-black cover w-full h-[250px] shadow-md shadow-black/50"
-        />
-      </div>
-      <div className="px-[50px] pb-10 pt-4 flex flex-col gap-4">
-        <div className="text-[17px] font-raleway font-bold tracking-wider">
-          {title}
-        </div>
-        <div className="text-[14px] font-raleway">{preview}</div>
-      </div>
-    </div>
-  );
-};
