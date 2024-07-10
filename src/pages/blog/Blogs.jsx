@@ -325,7 +325,7 @@ export const BlogCard = ({ image, title, preview, id }) => {
         <img
           src={image}
           alt=""
-          className="w-full h-full center object-cover brightness-75 bg-black z-0 rounded-xl"
+          className="w-full h-full center object-cover bg-black rounded-xl"
         />
       </div>
       <div className="mt-4 relative w-[350px] lg:w-[300px] font-raleway text-[15px] text-left">

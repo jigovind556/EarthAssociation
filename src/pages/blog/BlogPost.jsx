@@ -22,7 +22,7 @@ const BlogPost = () => {
         <img
           src={blog.image}
           alt=""
-          className="w-auto min-w-[250px] float-right ml-4 my-6 h-[300px] center object-cover brightness-75 bg-black z-0 rounded-xl"
+          className="w-auto min-w-[250px] float-right ml-4 my-6 h-[300px] center object-cover bg-black rounded-xl"
         />
         {/* </div> */}
         <div className="text-lg">{blog.content}</div>
