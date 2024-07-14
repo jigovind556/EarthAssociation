@@ -27,8 +27,8 @@ const Header = () => {
             alt="Earth Assosciation"
             className="w-10 h-10 mr-2 rounded-full"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
-            Earth Assosciation
+          <span className="self-center text-lg md:text-2xl font-semibold whitespace-nowrap">
+            The Earth Assosciation
           </span>
         </Link>
         <button
