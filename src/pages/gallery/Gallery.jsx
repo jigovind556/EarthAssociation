@@ -3,21 +3,20 @@ import RGallery from "react-photo-gallery";
 import { photos } from "../../assets/wildlifeWeek/photos";
 import { photos as photos2 } from "../../assets/newspaperCuttings/photos";
 import Photo from "./Photo";
+import { useGallery } from "../../context/GalleryContext";
 
 const Gallery = () => {
-  
+  const { openImage } = useGallery();
   const [seeMoreWildlife, setSeeMoreWildlife] = useState(false);
   const [seeMoreNewspaper, setSeeMoreNewspaper] = useState(false);
 
   return (
     <main className="my-[65px]">
       <section className="mx-auto max-w-[1140px]">
-        {/* Wildlife Week Section */}
         <h1 className="text-center text-[#333] font-raleway font-bold text-[36px] lg:text-[48px]">
           Gallery
         </h1>
         <div className="relative">
-          {/* Gallery with gradient overlay */}
           <div
             className={`relative overflow-hidden transition-all duration-500 ${
               seeMoreWildlife ? "max-h-[100%]" : "max-h-[400px]"
@@ -25,6 +24,12 @@ const Gallery = () => {
           >
             <RGallery
               photos={photos}
+              onClick={(event, atr) =>
+                openImage(
+                  atr.photo.src,
+                  photos.map((p) => p.src)
+                )
+              }
               renderImage={(props) => <Photo {...props} />}
             />
           </div>
@@ -58,6 +63,12 @@ const Gallery = () => {
           >
             <RGallery
               photos={photos2}
+              onClick={(event, atr) =>
+                openImage(
+                  atr.photo.src,
+                  photos2.map((p) => p.src)
+                )
+              }
               renderImage={(props) => <Photo {...props} />}
             />
           </div>
