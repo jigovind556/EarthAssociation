@@ -20,6 +20,7 @@ const GalleryModal = () => {
         <img
           src={currentImage}
           alt="Gallery Image"
+          loading="lazy"
           className="max-w-full max-h-[90vh] rounded-lg"
         />
       </div>
