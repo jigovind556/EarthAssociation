@@ -87,6 +87,10 @@ const menu = [
     item: "About us",
     link: "/about",
   },
+  {
+    item: "Gallery",
+    link: "/gallery",
+  },
   // {
   // 	item: "Our work",
   // 	link: "#",

@@ -7,6 +7,8 @@ import Landing from "./pages/landing/Landing";
 import About from "./pages/about/About";
 import Blogs from "./pages/blog/Blogs.jsx";
 import BlogPost from "./pages/blog/BlogPost.jsx";
+import Gallery from "./pages/gallery/Gallery.jsx";
+import NotFound from "./pages/notFound/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
         path: "blogs/:blogId",
         element: <BlogPost />,
       },
+      {
+        path: "gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      }
     ],
   },
 ]);
