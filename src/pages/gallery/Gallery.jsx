@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import RGallery from "react-photo-gallery";
 import { photos } from "../../assets/wildlifeWeek/photos";
 import { photos as photos2 } from "../../assets/newspaperCuttings/photos";
+import Photo from "./Photo";
 
 const Gallery = () => {
-  // State to control "see more" functionality
+  
   const [seeMoreWildlife, setSeeMoreWildlife] = useState(false);
   const [seeMoreNewspaper, setSeeMoreNewspaper] = useState(false);
 
@@ -22,7 +23,10 @@ const Gallery = () => {
               seeMoreWildlife ? "max-h-[100%]" : "max-h-[400px]"
             }`}
           >
-            <RGallery photos={photos} />
+            <RGallery
+              photos={photos}
+              renderImage={(props) => <Photo {...props} />}
+            />
           </div>
 
           {/* Gradient Overlay */}
@@ -52,7 +56,10 @@ const Gallery = () => {
               seeMoreNewspaper ? "max-h-[100%]" : "max-h-[400px]"
             }`}
           >
-            <RGallery photos={photos2} />
+            <RGallery
+              photos={photos2}
+              renderImage={(props) => <Photo {...props} />}
+            />
           </div>
 
           {/* Gradient Overlay */}
