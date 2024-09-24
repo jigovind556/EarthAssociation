@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import international from "../../assets/international.png";
 import glance from "../../assets/glance.png";
 import director from "../../assets/director.jpeg";
-import coordinator from "../../assets/coordinator.jpeg";
+import coordinator from "../../assets/coordinator_new.jpg";
 
 export const blogsData = [
   {
