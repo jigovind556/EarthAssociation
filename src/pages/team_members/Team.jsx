@@ -11,11 +11,11 @@ const Team = () => {
         <h2 className="font-bebas text-[45px] tracking-[1px] font-bold mb-8">
           Meet Our Team
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 justify-items-center md:justify-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="max-w-sm rounded overflow-hidden shadow-lg bg-white"
+              className="max-w-sm w-full rounded overflow-hidden shadow-lg bg-white"
               onClick={() =>
                 openImage(
                   member.image,
