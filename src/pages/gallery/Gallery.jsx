@@ -12,10 +12,10 @@ const Gallery = () => {
 
   return (
     <main className="my-[65px]">
-      <section className="mx-auto max-w-[1140px]">
-        <h1 className="text-center text-[#333] font-raleway font-bold text-[36px] lg:text-[48px]">
+      <section className="max-w-[1140px] mx-auto p-2.5 mt-20 mb-8 text-[18px] text-center text-black font-raleway min-h-[90vh]">
+        <h2 className="font-bebas text-[45px] tracking-[1px] font-bold mb-8">
           Gallery
-        </h1>
+        </h2>
         <div className="relative">
           <div
             className={`relative overflow-hidden transition-all duration-500 ${
@@ -51,9 +51,9 @@ const Gallery = () => {
         </div>
 
         {/* Newspaper Cuttings Section */}
-        <h1 className="text-center text-[#333] font-raleway font-bold text-[36px] lg:text-[48px] mt-12">
+        <h2 className="font-bebas text-[45px] tracking-[1px] font-bold mb-8">
           Newspaper Cuttings
-        </h1>
+        </h2>
         <div className="relative">
           {/* Gallery with gradient overlay */}
           <div

@@ -91,6 +91,10 @@ const menu = [
     item: "Gallery",
     link: "/gallery",
   },
+  {
+    item: "Meet our Team",
+    link: "/team",
+  },
   // {
   // 	item: "Our work",
   // 	link: "#",
