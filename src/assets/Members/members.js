@@ -1,4 +1,4 @@
-import p1 from "./banwari_lal_sharma.png";
+import p1 from "./banvari_lal_sharma.png";
 import p2 from "./jalaj_sharma.png";
 import p3 from "./yashdeep_parashar.png";
 import p4 from "./poonam.png";
@@ -6,9 +6,11 @@ import p5 from "./deep_lata_sharma.png";
 import p6 from "./kartikey_shukla.png";
 import p7 from "./vandana_mehrotra.png";
 import p8 from "./tejaswini_ojha.png";
+import p9 from "./pankaj_ojha.jpg";
 
 import director from "./director.jpeg";
 import pcoordinator from "./pcoordinator.jpg";
+import deputydirector from "./aarti_sharma.jpg";
 
 
 export const teamMembers = [
@@ -18,12 +20,17 @@ export const teamMembers = [
     image: director,
   },
   {
+    name: "Aarti Sharma",
+    position: "Deputy Director",
+    image: deputydirector,
+  },
+  {
     name: "Mrs. Mamta Sharma",
     position: "Program Co-ordinator",
     image: pcoordinator,
   },
   {
-    name: "Banwari Lal Sharma",
+    name: "Banvari Lal Sharma",
     position: "Retired Forest Officer, Vice President",
     image: p1,
   },
@@ -62,4 +69,9 @@ export const teamMembers = [
     position: "I.T. Head",
     image: p8,
   },
+  {
+    name: "Pankaj Ojha",
+    position: "FDA Commissioner",
+    image: p9,
+  }
 ];

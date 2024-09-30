@@ -36,20 +36,21 @@ const Footer = () => {
         <div className="flex justify-between items-center flex-col md:flex-row gap-4">
           <div className="text-[18px] text-start font-medium">
             <h3 className="text-[22px]">The Earth Association</h3>
-            <div className="flex mt-2 flex-col tab:flex-row tab:gap-4">
+            <div className="flex mt-2 flex-col lg:flex-row lg:gap-4">
               <span>Contact Us -</span>
-              <p>
-                Email:{" "}
-                <a href="mail:earthassociation22@gmail.com">
-                  earthassociation22@gmail.com
-                </a>
-              </p>
-              <p>
-                Tel: <a href="tel:+918829012209">+91 88290 12209</a>
-              </p>
+              <div className="flex flex-col  tab:flex-row tab:gap-4">
+                <p>
+                  Email:{" "}
+                  <a href="mail:earthassociation22@gmail.com">
+                    earthassociation22@gmail.com
+                  </a>
+                </p>
+                <p>
+                  Tel: <a href="tel:+918829012209">+91 88290 12209</a>
+                </p>
+              </div>
             </div>
           </div>
-
           <div className="flex gap-2">
             <a href="#">
               <img
@@ -79,6 +80,10 @@ const Footer = () => {
               />
             </a>
           </div>
+        </div>
+        {/* Copyright Section */}
+        <div className="mt-6 text-center text-[14px] text-gray-400">
+          <p>© 2024 The Earth Association. All Rights Reserved.</p>
         </div>
       </div>
     </section>
