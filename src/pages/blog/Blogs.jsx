@@ -321,18 +321,18 @@ export default Blogs;
 export const BlogCard = ({ image, title, preview, id }) => {
   return (
     <div className="flex justify-center flex-col items-center">
-      <div className="relative w-[350px] h-[400px] tab:h-[350px] lg:w-[300px]">
+      <div className="relative  w-[300px] md:w-[350px] h-[400px] tab:h-[350px] lg:w-[300px]">
         <img
           src={image}
           alt=""
           className="w-full h-full center object-cover bg-black rounded-xl"
         />
       </div>
-      <div className="mt-4 relative w-[350px] lg:w-[300px] font-raleway text-[15px] text-left">
+      <div className="mt-4 relative w-[300px] md:w-[350px] lg:w-[300px] font-raleway text-[15px] text-left">
         <span className="uppercase font-bold text-[20px] tracking-tighter py-2">
           {title}
         </span>
-        <p className="pb-6 tracking-wide">{preview}</p>
+        <p className="pb-6 tracking-wide text-justify">{preview}</p>
         <Link
           to={`/blogs/${id}`} // Pass only the ID
           className="text-blue-500 font-semibold mt-2 inline-block hover:underline"
