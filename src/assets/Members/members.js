@@ -10,7 +10,7 @@ import p9 from "./pankaj_ojha.jpg";
 
 import director from "./director.jpeg";
 import pcoordinator from "./pcoordinator.jpg";
-import deputydirector from "./aarti_sharma.jpg";
+import pcoordinator2 from "./aarti_sharma.jpg";
 
 
 export const teamMembers = [
@@ -20,14 +20,14 @@ export const teamMembers = [
     image: director,
   },
   {
-    name: "Aarti Sharma",
-    position: "Deputy Director",
-    image: deputydirector,
+    name: "Mrs. Mamta Sharma",
+    position: "Chief Program Co-ordinator",
+    image: pcoordinator,
   },
   {
-    name: "Mrs. Mamta Sharma",
-    position: "Program Co-ordinator",
-    image: pcoordinator,
+    name: "Aarti Sharma",
+    position: "Program Co-ordinator, Academics",
+    image: pcoordinator2,
   },
   {
     name: "Banvari Lal Sharma",
@@ -73,5 +73,5 @@ export const teamMembers = [
     name: "Pankaj Ojha",
     position: "FDA Commissioner",
     image: p9,
-  }
+  },
 ];

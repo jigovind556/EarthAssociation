@@ -6,7 +6,7 @@ const GalleryModal = () => {
   if (!currentImage) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+    <div className="fixed inset-0 z-[1500] flex items-center justify-center bg-black bg-opacity-80">
       {/* Close Button */}
       <button
         className="fixed top-4 right-4 z-50 text-white p-3 bg-black bg-opacity-50 rounded-full focus:outline-none"

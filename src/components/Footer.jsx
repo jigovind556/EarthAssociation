@@ -1,6 +1,7 @@
 import twitter from "../assets/twitter.svg";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
+import facebook from "../assets/socialmedia SVG/facebook.svg";
+import instagram from "../assets/socialmedia SVG/instagram.svg";
+import youtube from "../assets/socialmedia SVG/youtube.svg";
 
 const Footer = () => {
   return (
@@ -52,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-2">
-            {/* <a href="#">
+            {/* <a target="_blank" href="#">
               <img
                 src={twitter}
                 alt=""
@@ -61,7 +62,7 @@ const Footer = () => {
                 className="scale-[80%] bg-black p-3 rounded-full "
               />
             </a> */}
-            <a href="https://www.facebook.com/share/J5jBuGzJJFmfYAGm/?mibextid=LQQJ4d">
+            <a target="_blank" href="https://www.facebook.com/share/J5jBuGzJJFmfYAGm/?mibextid=LQQJ4d">
               <img
                 src={facebook}
                 alt=""
@@ -70,9 +71,18 @@ const Footer = () => {
                 className="scale-[80%] bg-black p-3 rounded-full "
               />
             </a>
-            <a href="https://www.instagram.com/earth_association?igsh=OTUxMThodjV0MTlh">
+            <a target="_blank" href="https://www.instagram.com/earth_association?igsh=OTUxMThodjV0MTlh">
               <img
                 src={instagram}
+                alt=""
+                width={50}
+                height={50}
+                className="scale-[80%] bg-black p-3 rounded-full "
+              />
+            </a>
+            <a target="_blank" href="https://youtube.com/@theearthassociation8535?si=2csfWBhOnYa8DRyw">
+              <img
+                src={youtube}
                 alt=""
                 width={50}
                 height={50}
