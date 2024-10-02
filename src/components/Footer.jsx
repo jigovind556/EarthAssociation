@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-2">
-            <a href="#">
+            {/* <a href="#">
               <img
                 src={twitter}
                 alt=""
@@ -60,8 +60,8 @@ const Footer = () => {
                 height={50}
                 className="scale-[80%] bg-black p-3 rounded-full "
               />
-            </a>
-            <a href="#">
+            </a> */}
+            <a href="https://www.facebook.com/share/J5jBuGzJJFmfYAGm/?mibextid=LQQJ4d">
               <img
                 src={facebook}
                 alt=""
@@ -70,7 +70,7 @@ const Footer = () => {
                 className="scale-[80%] bg-black p-3 rounded-full "
               />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/earth_association?igsh=OTUxMThodjV0MTlh">
               <img
                 src={instagram}
                 alt=""
