@@ -2,14 +2,19 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
+import GalleryModal from "./context/GalleryModal";
+import { GalleryProvider } from "./context/GalleryContext";
 
 function App() {
   return (
     <div id="detail">
-      <ScrollToTop />
-      <Header />
-      <Outlet />
-      <Footer />
+      <GalleryProvider>
+        <ScrollToTop />
+        <Header />
+        <Outlet />
+        <GalleryModal />
+        <Footer />
+      </GalleryProvider>
     </div>
   );
 }

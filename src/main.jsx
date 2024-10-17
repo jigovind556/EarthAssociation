@@ -7,6 +7,10 @@ import Landing from "./pages/landing/Landing";
 import About from "./pages/about/About";
 import Blogs from "./pages/blog/Blogs.jsx";
 import BlogPost from "./pages/blog/BlogPost.jsx";
+import Gallery from "./pages/gallery/Gallery.jsx";
+import NotFound from "./pages/notFound/NotFound.jsx";
+import Team from "./pages/team_members/Team.jsx";
+import Events from "./pages/events/events.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,9 +30,25 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
+        path: "events/:eventId",
+        element: <Events />,
+      },
+      {
         path: "blogs/:blogId",
         element: <BlogPost />,
       },
+      {
+        path: "gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "team",
+        element: <Team/>,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      }
     ],
   },
 ]);
@@ -38,3 +58,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
